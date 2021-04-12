@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="My GitHub Data" />
+  <meta name="keywords" content="GitHub, username, data" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My GitHub Data</title>
+  <link href="styles/output.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<main class="flex flex-col h-screen my-auto items-center bg-cover">
+  <h1 class="text-7xl font-bold mt-10 mb-5">My GitHub Data</h1>
+  <p id="sub-head" class="text-3xl font-bold mt-10 mb-5">
+    Enter your GitHub username to see your repo information
+  </p>
+  <form id="search" class="mb-10">
+    <input
+      class="border py-1"
+      id="user-name"
+      type="text"
+      name="user-name"
+      placeholder="GitHub Username"
+    />
+    <input
+      type="submit"
+      value="Submit"
+      class="cursor-pointer text-white font-bold bg-gray-700 hover:bg-gray-800 py-1 px-3 rounded"
+    />
+  </form>
+  <ol id="repos"></ol>
+</main>
+</body>
+<script src="script.js"></script>
+</html>
