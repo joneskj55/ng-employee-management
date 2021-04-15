@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('header') %>
-
   <body class="flex flex-col min-h-screen">
-    <%- include('navbar') %>
+    <nav
+      class="sticky top-0 mx-auto p-5 font-sans flex justify-between py-4 px-6 bg-green-800 shadow sm:items-baseline w-full mb-14"
+    >
+      <div>
+        <a href="/" class="text-2xl no-underline text-white hover:text-gray-300"
+          >EMS</a
+        >
+      </div>
+      <ul class="flex flex-row">
+        <a
+          href="/new"
+          class="pr-5 text-lg no-underline text-white hover:text-gray-300"
+          >Add</a
+        >
+        <a
+          href="/list"
+          class="pr-5 text-lg no-underline text-white hover:text-gray-300"
+          >List</a
+        >
+      </ul>
+    </nav>
     <main class="flex-grow mb-20">
       <h1 class="mt-6 text-5xl md:text-7xl font-bold text-center">
         Employee Management System
@@ -63,6 +81,28 @@
         </div>
       </div>
     </main>
+    <footer class="text-center p-4 bg-gray-200 text-sm sm:text-lg">
+      <p>
+        <a
+          href="https://github.com/joneskj55"
+          target="_blank"
+          aria-label="github"
+          ><i
+            aria-hidden="true"
+            id="github-icon"
+            class="fab fa-github social"
+          ></i
+        ></a>
+        <a href="https://kevinjones.engineer" target="_blank" class="p-4"
+          >Kevin Jones Global Software, Est. 2016</a
+        >
+        <a
+          href="https://linkedin.com/in/joneskj55"
+          target="_blank"
+          aria-label="linkedin"
+          ><i aria-hidden="true" class="fab fa-linkedin social"></i
+        ></a>
+      </p>
+    </footer>
   </body>
-  <%- include('footer') %> <%- include('scripts') %>
 </html>
