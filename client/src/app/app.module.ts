@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { HomeComponent } from './home/home.component';
 import { NewComponent } from './new/new.component';
+import { NavComponent } from './nav/nav.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -15,7 +17,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ListComponent, HomeComponent, NewComponent],
+  declarations: [
+    AppComponent,
+    ListComponent,
+    HomeComponent,
+    NewComponent,
+    NavComponent,
+    FooterComponent,
+  ],
   imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],
   bootstrap: [AppComponent],
