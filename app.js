@@ -1,28 +1,28 @@
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
-var mongoose = require("mongoose");
+const express = require("express");
+const path = require("path");
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
+require("./models/db");
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
+const indexRouter = require("./routes/index");
+const usersRouter = require("./routes/users");
 
 // "mongodb://localhost:27017/test"
 
-var mongoDB = "mongodb://localhost:27017/test";
-mongoose.connect(mongoDB, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+// var mongoDB = "mongodb://localhost:27017/test";
+// mongoose.connect(mongoDB, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
 
-mongoose.Promise = global.Promise;
-var db = mongoose.connection;
-db.on("error", console.error.bind(console, "MongoDB connected error: "));
-db.once("open", function () {
-  console.log("Application connected to mLab MongoDB instance");
-});
+// mongoose.Promise = global.Promise;
+// var db = mongoose.connection;
+// db.on("error", console.error.bind(console, "MongoDB connected error: "));
+// db.once("open", function () {
+//   console.log("Application connected to mLab MongoDB instance");
+// });
 
-var app = express();
+const app = express();
 
 app.use(logger("dev"));
 app.use(express.json());
